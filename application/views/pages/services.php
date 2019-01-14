@@ -14,7 +14,7 @@
 	 			'src'=>site_url().'assets/images/services/'.$service['s_img'],
 	 			'width'=>'100%',
 	 			'height'=>200,
-	 			'class'=>'thumb'
+	 			'class'=>'thumb rounded'
 	 			);
 	 		
 	 		echo img($img_attributes);

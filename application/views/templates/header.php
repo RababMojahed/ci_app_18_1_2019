@@ -14,9 +14,21 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+		<link rel="stylesheet" href="<?php  echo base_url();?>assets/css/fontawesome/css/all.min.css">
 		<link rel="stylesheet" href="<?php  echo base_url();?>assets/css/style.css">
 		<script src="<?php echo base_url();?>assets/ckeditor/ckeditor.js"></script>
-
+<style type="text/css">
+	.bootstrap-select .dropdown-toggle {
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 4px !important;
+    color: #919191;
+    padding: 10px 12px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+</style>
 	</head>	
 	<body>
 
@@ -38,8 +50,8 @@
 		        <a class="nav-link dropdown-toggle" href="<?php echo base_url();?>/services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		          Our Services
 		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="<?php echo base_url();?>/services">Dental</a>
+		        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item " href="<?php echo base_url();?>/services">Dental</a>
 		          <div class="dropdown-divider"></div>
 		          <a class="dropdown-item" href="<?php echo base_url();?>/tooth_clinic">Family medicine </a>
 		          <div class="dropdown-divider"></div>
@@ -47,8 +59,7 @@
 		        </div>		        
 		      </li>
 		      <li class="nav-item active">
-		        <a class="nav-link" href="<?php echo base_url();?>doctors">Doctors</a>
-		      </li>
+		        <a class="nav-link" href="<?php echo base_url();?>Doctor_c/dispaly_doctors">Doctors</a>
 		      <li class="nav-item active">
 		        <a class="nav-link" href="<?php echo base_url();?>contact">Contact</a>
 		      </li>

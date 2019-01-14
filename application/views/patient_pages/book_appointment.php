@@ -1,29 +1,9 @@
-<?php echo heading($page_name,2,'class="text-center"');?>
-<?php echo validation_errors();?>
-<?php
-function make_input_fields($f_label,$f_type,$f_name,$f_placehold){
-	?>
-<div class='form-group'>
-	<?php
-	 echo form_label($f_label);
-	 $input_arr=array(
-	 	'type'			=>$f_type,
-	 	'name'			=>$f_name,
-	 	'placeholder'	=>$f_placehold,
-	 	'class'			=>'form-control'
-	 	);
-	 echo form_input($input_arr);
-	?>	
-</div>
-<?php	
-}//end make_register_fields function
-
-function display_clinic_times(){
-	$days=array('Saturday','Sunday','Monday','Tuseday','Wednesday','Thurseday','Friday');
-	$times='08:00-19:00 hrs';
-
-}//end display_clinic_times function
+<?php echo heading($page_name,2,'class="text-center"');
+/*---------------include page which contains functions of form's tags*/
+$included_page=APPPATH.'/views/shared_pages/input_fields.php';
+include($included_page);
 ?>
+<?php echo validation_errors();?>
 <?php
  echo form_open('patient_c/book_appointment');?>
  <div class="row">
@@ -54,16 +34,59 @@ function display_clinic_times(){
 	</div>
 	<div class="col-md-6">
 		<?php
-		 make_input_fields('Name','text','p_name','Enter your full name');
-		 make_input_fields('Email','email','p_email','Enter your Email');
-		 make_input_fields('Phone Number','number','p_phone','Enter your phone Number');
-		 make_input_fields('Appointment Date','date','appt_date','Choose appointment date');
+		 make_input_fields('Name*','text','p_name','Enter your full name');
+		 make_input_fields('Email*','email','p_email','Enter your Email');
+         ?>
+         <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Phone Number*</label>
+              <input type="number" class="form-control" name='p_phone' placeholder='Enter your phone Number' autofocus required>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Medical Service*</label>
+              <select class="form-control">
+                <option selected>Choose Medical Service...</option>
+                    <option value=''>Dental</option>
+                    <option value=''>Family Medicin</option>
+                    <option value=''>Others</option>
+              </select>
+            </div>            
+          </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Appointment Date*</label>
+              <input type="date" class="form-control" name='appt_date' placeholder='Choose appointment date' autofocus required>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Appointment Slot*</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose Appointment Slot...</option>
+                    <option value=''>09:00 A.M - 12:00 P.M</option>
+                    <option value=''>12:00 P.M - 04:00 P.M</option>
+                    <option value=''>04:00 P.M - 08:00 P.M</option>
+              </select>
+            </div>            
+          </div>
+
+        <?php
+		 make_textarea_field("Any notes for the doctor's office",'appt_note',"Enter any notes for the doctor's office");
 		 echo br(1);
 		 ?>
-		 <button type='submit' class='btn btn-primary btn-block'>Submit</button>
+         <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox">
+              <label class="form-check-label" for="gridCheck">
+                I understand that this is only an appointment request and I will be secheduled only after aconfirmation call from ABC.
+              </label>
+            </div>
+          </div>
+		 <button type='submit' class='btn btn-primary btn-block'>Book Appointement</button>
  	</div>
  </div>
 <?php
 echo br(2);
  echo form_close();
  ?>
+
+ 
+

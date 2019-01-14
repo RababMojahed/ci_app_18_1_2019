@@ -53,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 *Author: Rabab Shalan
 *Description: Customizing routing rules 
 */
+$route['doctor_c']='doctor_c/display_doctors';
 $route['user/register']='user_c/register';
 $route['services/create']='services_c/create_service';
 $route['services']='services_c';
