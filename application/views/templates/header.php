@@ -103,9 +103,9 @@
 		    </form> -->
 		  </div>
 		</nav>
-		<div class='container'>
+		<div class='container-fluid' style="padding-right:0px; padding-left: 0px;">
 		<?php 
-			echo br(1);
+			/*echo br(1);*/
 			if($this->session->flashdata('user_registered')):?>
 				<p class="alert alert-success"><?php echo $this->session->flashdata('user_registered');?></p>
 			<?php endif;?>

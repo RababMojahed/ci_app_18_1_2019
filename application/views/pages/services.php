@@ -1,3 +1,4 @@
+<div class="container">
 <?php 
 /*Date: Jan,10,2019
 *Author:Rabab Shalan

@@ -1,3 +1,4 @@
+<div class="container">
 <?php echo heading($page_name,2,'class="text-center"');
 /*---------------include page which contains functions of form's tags*/
 $included_page=APPPATH.'/views/shared_pages/input_fields.php';
@@ -70,7 +71,7 @@ include($included_page);
 
         <?php
 		 make_textarea_field("Any notes for the doctor's office",'appt_note',"Enter any notes for the doctor's office");
-		 echo br(1);
+		
 		 ?>
          <div class="form-group">
             <div class="form-check">

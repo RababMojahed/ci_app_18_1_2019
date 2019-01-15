@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2019 at 07:07 PM
+-- Generation Time: Jan 14, 2019 at 09:20 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -32,6 +32,7 @@ CREATE TABLE `appointment` (
   `appt_id` int(12) NOT NULL,
   `appt_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `appt_time` time NOT NULL,
+  `appt_note` text,
   `appt_doctor_id` int(12) NOT NULL,
   `appt_patient_id` int(12) NOT NULL,
   `appt_visit_id` int(12) NOT NULL
@@ -64,9 +65,7 @@ INSERT INTO `category` (`c_id`, `c_name`) VALUES
 
 CREATE TABLE `doctor` (
   `d_id` int(12) NOT NULL,
-  `d_fname` varchar(30) NOT NULL,
-  `d_sname` varchar(30) NOT NULL,
-  `d_lname` varchar(30) NOT NULL,
+  `d_name` varchar(150) NOT NULL,
   `d_email` varchar(50) NOT NULL,
   `d_phone` int(14) NOT NULL,
   `d_address` varchar(50) NOT NULL,
@@ -83,9 +82,7 @@ CREATE TABLE `doctor` (
 
 CREATE TABLE `employee` (
   `emp_id` int(12) NOT NULL,
-  `emp_fname` varchar(30) NOT NULL,
-  `emp_sname` varchar(30) NOT NULL,
-  `emp_lname` varchar(30) NOT NULL,
+  `emp_name` varchar(150) NOT NULL,
   `emp_email` varchar(50) NOT NULL,
   `emp_phone` int(14) NOT NULL,
   `emp_address` varchar(50) NOT NULL,
@@ -97,8 +94,8 @@ CREATE TABLE `employee` (
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`emp_id`, `emp_fname`, `emp_sname`, `emp_lname`, `emp_email`, `emp_phone`, `emp_address`, `emp_salary`, `emp_employ_date`) VALUES
-(1, 'Rabab', 'Mojahed', 'Shalan', 'rabab@gmail.com', 777001122, 'Al-Rudah-Sanaa', 800, '2019-01-13 15:54:31');
+INSERT INTO `employee` (`emp_id`, `emp_name`, `emp_email`, `emp_phone`, `emp_address`, `emp_salary`, `emp_employ_date`) VALUES
+(1, 'Rabab', 'rabab@gmail.com', 777001122, 'Al-Rudah-Sanaa', 800, '2019-01-13 15:54:31');
 
 -- --------------------------------------------------------
 
@@ -108,9 +105,7 @@ INSERT INTO `employee` (`emp_id`, `emp_fname`, `emp_sname`, `emp_lname`, `emp_em
 
 CREATE TABLE `patient` (
   `p_id` int(12) NOT NULL,
-  `p_fname` varchar(30) NOT NULL,
-  `p_sname` varchar(30) NOT NULL,
-  `p_lname` varchar(30) NOT NULL,
+  `p_name` varchar(150) NOT NULL,
   `p_email` varchar(50) NOT NULL,
   `p_phone` int(14) NOT NULL,
   `p_address` varchar(50) NOT NULL,
@@ -149,7 +144,12 @@ CREATE TABLE `service` (
 --
 
 INSERT INTO `service` (`s_id`, `s_title`, `c_id`, `s_description`, `s_img`, `s_emp_id`) VALUES
-(32, 'Boold examination', 2, '<p>The&nbsp;<strong>Hello World</strong>&nbsp;project is a time-honored tradition in computer programming. It is a simple exercise that gets you started when learning something new. Let&rsquo;s get started with GitHub!</p>\r\n\r\n<p>A&nbsp;<strong>repository</strong>&nbsp;is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets &ndash; anything your project needs. We recommend including a&nbsp;<em>README</em>, or a file with information about your project. GitHub makes it easy to add one at the same time you create your new repository.&nbsp;<em>It also offers other common options such as a license file</em></p>\r\n', 'yellow.png', 1);
+(32, 'Eye examination', 0, '<p>The&nbsp;<strong>Hello World</strong>&nbsp;project is a time-honored tradition in computer programming. It is a simple exercise that gets you started when learning something new. Let&rsquo;s get started with GitHub!</p>\r\n\r\n<p>A&nbsp;<strong>repository</strong>&nbsp;is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets &ndash; anything your project needs. We recommend including a&nbsp;<em>README</em>, or a file with information about your project. GitHub makes it easy to add one at the same time you create your new repository.&nbsp;<em>It also offers other common options such as a license file</em></p>\r\n', 'yellow.png', 1),
+(33, 'Drink of Water', 1, '<p>When you open a&nbsp;<em>pull request</em>, you&rsquo;re proposing your changes and requesting that someone review and pull in your contribution and merge them into their branch. Pull requests show&nbsp;<em>diffs</em>, or differences, of the content from both branches. The changes, additions, and subtractions are shown in green and red.</p>\r\n', 'wedding.jpg', 1),
+(34, 'Eyes examination', 1, '<p>JavaScript is one of the&nbsp;<strong>3 languages</strong>&nbsp;all web developers&nbsp;<strong>must</strong>&nbsp;learn:</p>\r\n\r\n<p>&nbsp;&nbsp; 1.&nbsp;<strong>HTML</strong>&nbsp;to define the content of web pages</p>\r\n\r\n<p>&nbsp;&nbsp; 2.&nbsp;<strong>CSS</strong>&nbsp;to specify the layout of web pages</p>\r\n\r\n<p>&nbsp;&nbsp; 3.&nbsp;<strong>JavaScript</strong>&nbsp;to program the behavior of web pages</p>\r\n\r\n<p>Web pages are not the only place where JavaScript is used. Many desktop and server programs use JavaScript. Node.js is the best known. Some databases, like MongoDB and CouchDB, also use JavaScript as their programming language.</p>\r\n', 'yellow.png', 1),
+(35, 'Nutrition', 0, '<p>JavaScript is one of the&nbsp;<strong>3 languages</strong>&nbsp;all web developers&nbsp;<strong>must</strong>&nbsp;learn.</p>\r\n', 'blue1.png', 1),
+(36, 'Nutrition', 2, '<p>default column gutters for tighter and more compact layouts.</p>\r\n', 'b87519f01a62693119870a60e9e5c04f.png', 1),
+(37, 'Skin and Winter', 2, '<p>This year is described with the winter is the coldest&nbsp;</p>\r\n', 'red1.png', 1);
 
 -- --------------------------------------------------------
 
@@ -315,7 +315,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `s_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `s_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `user`

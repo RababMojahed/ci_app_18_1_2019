@@ -1,3 +1,4 @@
+<div class="container">
 <?php echo heading($page_name,2,'class="text-center"');?>
 <?php echo br(2);?>
 <div class="row">    

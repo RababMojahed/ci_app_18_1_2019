@@ -695,3 +695,183 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="jumbotron" style="background-image: url('/Portals/_default/Skins/DCDC-En/images/Banner1.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1 class="heading">Delivering World Class Diagnostic &amp; Patient Care in UAE.</h1>
+                <a href="/Home/About-Us" class="btn btn-primary" style="color: white;">About Us</a> &nbsp;&nbsp; 
+                <a href="/Home/Why-Us" class="btn btn-black" style="color: white;">Why DCDC</a>
+            </div>
+            <div class="col-sm-4">
+                <div class="slider-box-appointment appointCol">
+                    <div class="header">
+                        <h3 class="heading font-2 text-center">Book an Appointment</h3>
+                    </div>
+                    <hr class="hr-2">
+                    <div class="body contactMainDiv">
+                        
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Your Name" id="txtName" data-validation-engine=" validate[required,maxSize[240]]">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Your Email" id="txtEmail" data-validation-engine=" validate[required,maxSize[240],custom[email]]">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" id="txtPhoneNumber" data-validation-engine=" validate[required,maxSize[240],custom[onlyNumberSp]]" placeholder="Your Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control date-select hasDatepicker" type="text" placeholder="Appointment Date" id="txtDatePicker" data-validation-engine=" validate[required,maxSize[240]]">
+                            </div>
+                            <div class="form-group">
+                                <div class="btn-group bootstrap-select">
+                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="ddlService" title="Select Service"><span class="filter-option pull-left">Select Service</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Select Service</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Dental</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Radiology</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Interventional Cardiology</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">General Practitioner</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Internal Medicine</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="" tabindex="-98" id="ddlService">
+                                        <option id="" value="">Select Service</option>
+                                        <option id="Dental" value="Dental">Dental</option>
+                                        <option id="Radiology" value="Radiology">Radiology</option>
+                                        <option id="InterventionalCardiology" value="Interventional Cardiology">Interventional Cardiology</option>
+                                        <option id="GeneralPractitioner" value="General Practitioner">General Practitioner</option>
+                                        <option id="InternalMedicine" value="Internal Medicine">Internal Medicine</option>
+                                    </select></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" id="message" placeholder="Your Message"></textarea>
+                            </div>
+
+                            <button class="btn btn-black btn-block BookNow" id="BookNow" type="submit">Book Now</button>
+                        
+                    </div>
+                    <div class="thanks-wrap">
+                        <div class="thanks" style="display: none;">
+                            <b>Thank you</b>
+                            <p>Your message has been sent to us and we will aim to respond within 24 hrs to your enquiry. Have a great day!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-sm-4">
+                <div class="slider-box-appointment appointCol">
+                    <div class="header">
+                        <h3 class="heading font-2 text-center">Book an Appointment</h3>
+                    </div>
+                    <hr class="hr-2">
+                    <div class="body contactMainDiv">
+                        
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Your Name" id="txtName" data-validation-engine=" validate[required,maxSize[240]]">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Your Email" id="txtEmail" data-validation-engine=" validate[required,maxSize[240],custom[email]]">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" id="txtPhoneNumber" data-validation-engine=" validate[required,maxSize[240],custom[onlyNumberSp]]" placeholder="Your Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control date-select hasDatepicker" type="text" placeholder="Appointment Date" id="txtDatePicker" data-validation-engine=" validate[required,maxSize[240]]">
+                            </div>
+                            <div class="form-group">
+                                <div class="btn-group bootstrap-select">
+                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="ddlService" title="Select Service"><span class="filter-option pull-left">Select Service</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Select Service</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Dental</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Radiology</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Interventional Cardiology</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">General Practitioner</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Internal Medicine</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="" tabindex="-98" id="ddlService">
+                                        <option id="" value="">Select Service</option>
+                                        <option id="Dental" value="Dental">Dental</option>
+                                        <option id="Radiology" value="Radiology">Radiology</option>
+                                        <option id="InterventionalCardiology" value="Interventional Cardiology">Interventional Cardiology</option>
+                                        <option id="GeneralPractitioner" value="General Practitioner">General Practitioner</option>
+                                        <option id="InternalMedicine" value="Internal Medicine">Internal Medicine</option>
+                                    </select></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" id="message" placeholder="Your Message"></textarea>
+                            </div>
+
+                            <button class="btn btn-black btn-block BookNow" id="BookNow" type="submit">Book Now</button>
+                        
+                    </div>
+                    <div class="thanks-wrap">
+                        <div class="thanks" style="display: none;">
+                            <b>Thank you</b>
+                            <p>Your message has been sent to us and we will aim to respond within 24 hrs to your enquiry. Have a great day!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+                 <!--      <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Your Name" id="txtName" data-validation-engine=" validate[required,maxSize[240]]">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Your Email" id="txtEmail" data-validation-engine=" validate[required,maxSize[240],custom[email]]">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" id="txtPhoneNumber" data-validation-engine=" validate[required,maxSize[240],custom[onlyNumberSp]]" placeholder="Your Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control date-select hasDatepicker" type="text" placeholder="Appointment Date" id="txtDatePicker" data-validation-engine=" validate[required,maxSize[240]]">
+                            </div>
+                            <div class="form-group">
+                                <div class="btn-group bootstrap-select">
+                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="ddlService" title="Select Service"><span class="filter-option pull-left">Select Service</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">Select Service</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Dental</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Radiology</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Interventional Cardiology</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">General Practitioner</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Internal Medicine</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="" tabindex="-98" id="ddlService">
+                                        <option id="" value="">Select Service</option>
+                                        <option id="Dental" value="Dental">Dental</option>
+                                        <option id="Radiology" value="Radiology">Radiology</option>
+                                        <option id="InterventionalCardiology" value="Interventional Cardiology">Interventional Cardiology</option>
+                                        <option id="GeneralPractitioner" value="General Practitioner">General Practitioner</option>
+                                        <option id="InternalMedicine" value="Internal Medicine">Internal Medicine</option>
+                                    </select></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" id="message" placeholder="Your Message"></textarea>
+                            </div>
+
+                            <button class="btn btn-black btn-block BookNow" id="BookNow" type="submit">Book Now</button>
+                        
+                    </div>
+                    <div class="thanks-wrap">
+                        <div class="thanks" style="display: none;">
+                            <b>Thank you</b>
+                            <p>Your message has been sent to us and we will aim to respond within 24 hrs to your enquiry. Have a great day!</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
