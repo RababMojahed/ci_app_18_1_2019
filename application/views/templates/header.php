@@ -82,6 +82,11 @@
 		    	  <a class="nav-link" href="<?php echo base_url();?>services_c/create_service">Create Service</a>
 		      </li>
 			    </ul>
+			    <ul class='nav navbar-nav navbar-right '>
+		    	<li>
+		    	  <a class="nav-link" href="<?php echo base_url();?>doctor_c/create_doctor">Create Doctor</a>
+		      </li>
+			    </ul>
 			    
 			    <ul class='nav navbar-nav navbar-right '>
 			    	<li>

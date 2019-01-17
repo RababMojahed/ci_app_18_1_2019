@@ -5,6 +5,7 @@ class Patient_c extends CI_Controller{
 		parent::__construct();
 		$this->load->model('Patient_m');
 		$this->load->library('form_validation');
+		$data['page_name']='Book Your Appointment';
 	}//end __construct function
 	public function show_general($page_title,$target_page,$data){
 

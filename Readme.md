@@ -9,7 +9,7 @@ Introduction - the project's aim helps busy people to communicate and make reser
 Technologies:
 PHP(v7.3)
 CodeIgniter framework (v3.1.9)
-MySql Database (ci_app_db.sql file in root directory of project is the database)
+MySql Database (ci_app_db.sql file in root directory of project is the database with date 17/1/2018)
 Bootstrap(v4.2) 
 HTML 5
 

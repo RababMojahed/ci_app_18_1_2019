@@ -8,7 +8,7 @@ function make_input_fields($f_label,$f_type,$f_name,$f_placehold){
 	 	'type'			=>$f_type,
 	 	'name'			=>$f_name,
 	 	'placeholder'	=>$f_placehold,
-	 	'class'			=>'form-control',
+	 	'class'			=>'form-control input-fields',
 	 	'required'		=>'required',
 	 	'autofocus'		=>'autofocus'
 	 	);
@@ -28,7 +28,7 @@ function make_textarea_field($f_label,$f_name,$f_placehold){
 	 	'type'			=>'textarea',
 	 	'name'			=>$f_name,
 	 	'placeholder'	=>$f_placehold,
-	 	'class'			=>'form-control',
+	 	'class'			=>'form-control input-fields',
 	 	'autofocus'		=>'autofocus',
 	 	'rows'			=>3
 	 	);

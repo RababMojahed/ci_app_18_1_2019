@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2019 at 09:20 PM
+-- Generation Time: Jan 17, 2019 at 10:06 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -69,10 +69,28 @@ CREATE TABLE `doctor` (
   `d_email` varchar(50) NOT NULL,
   `d_phone` int(14) NOT NULL,
   `d_address` varchar(50) NOT NULL,
+  `d_gender` tinyint(1) NOT NULL,
+  `d_personal_img` varchar(50) DEFAULT NULL,
   `d_salary` float NOT NULL,
   `d_employ_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `d_speciality_id` int(12) NOT NULL
+  `d_qualifier` int(12) NOT NULL,
+  `d_experience` int(12) DEFAULT NULL,
+  `d_certificate` varchar(100) DEFAULT NULL,
+  `d_note` text,
+  `d_specialty_id` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `doctor`
+--
+
+INSERT INTO `doctor` (`d_id`, `d_name`, `d_email`, `d_phone`, `d_address`, `d_gender`, `d_personal_img`, `d_salary`, `d_employ_date`, `d_qualifier`, `d_experience`, `d_certificate`, `d_note`, `d_specialty_id`) VALUES
+(1, 'Rabab Mojahed Mansour Shalan', 'rabab@gmail.com', 77777777, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 2000, '2018-12-31 21:00:00', 3, NULL, 'no_certificate_file.png', 'He is a hardworking', 1),
+(2, 'Rabab Mojahed Mansour Shalan', 'rabab1@gmail.com', 888888888, 'Al-Rudah-Sana\'a', 0, 'dr.png', 1000, '2018-12-03 21:00:00', 3, 1, 'no_certificate_file.png', 'honest', 1),
+(3, 'Rabab Mojahed Mansour Shalan', 'rabab2@gmail.com', 88887888, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 1500, '2019-01-15 21:00:00', 3, 1, 'no_certificate_file.png', 'creative', 1),
+(4, 'Rabab Mojahed Mansour Shalan', 'rabab3@gmail.com', 55555555, 'Al-Rudah-Sana\'a', 0, NULL, 1020, '2019-01-08 21:00:00', 3, 1, NULL, 'no thing', 1),
+(5, 'Rabab Mojahed Mansour Shalan', 'rabab11@gmail.com', 2147483647, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 2411, '2019-01-02 21:00:00', 4, 1, 'no_certificate_file.png', 'no ', 1),
+(9, 'Rabab Mojahed Mansour Shalan', 'rababd@gmail.com', 33333333, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 1020, '2019-01-09 21:00:00', 4, 2, 'no_certificate_file.png', 'dddddddd', 1);
 
 -- --------------------------------------------------------
 
@@ -162,6 +180,13 @@ CREATE TABLE `specialty` (
   `specialty_name` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `specialty`
+--
+
+INSERT INTO `specialty` (`specialty_id`, `specialty_name`) VALUES
+(1, 'Dental');
+
 -- --------------------------------------------------------
 
 --
@@ -229,7 +254,7 @@ ALTER TABLE `category`
 ALTER TABLE `doctor`
   ADD PRIMARY KEY (`d_id`),
   ADD UNIQUE KEY `d_email` (`d_email`),
-  ADD KEY `d_specialty_id_fk` (`d_speciality_id`);
+  ADD KEY `d_specialty_id_fk` (`d_specialty_id`);
 
 --
 -- Indexes for table `employee`
@@ -297,7 +322,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `d_id` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `d_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -345,7 +370,7 @@ ALTER TABLE `appointment`
 -- Constraints for table `doctor`
 --
 ALTER TABLE `doctor`
-  ADD CONSTRAINT `d_specialty_id_fk` FOREIGN KEY (`d_speciality_id`) REFERENCES `specialty` (`specialty_id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `d_specialty_id_fk` FOREIGN KEY (`d_specialty_id`) REFERENCES `specialty` (`specialty_id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `record`
