@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2019 at 10:06 PM
+-- Generation Time: Jan 18, 2019 at 10:24 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -90,7 +90,12 @@ INSERT INTO `doctor` (`d_id`, `d_name`, `d_email`, `d_phone`, `d_address`, `d_ge
 (3, 'Rabab Mojahed Mansour Shalan', 'rabab2@gmail.com', 88887888, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 1500, '2019-01-15 21:00:00', 3, 1, 'no_certificate_file.png', 'creative', 1),
 (4, 'Rabab Mojahed Mansour Shalan', 'rabab3@gmail.com', 55555555, 'Al-Rudah-Sana\'a', 0, NULL, 1020, '2019-01-08 21:00:00', 3, 1, NULL, 'no thing', 1),
 (5, 'Rabab Mojahed Mansour Shalan', 'rabab11@gmail.com', 2147483647, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 2411, '2019-01-02 21:00:00', 4, 1, 'no_certificate_file.png', 'no ', 1),
-(9, 'Rabab Mojahed Mansour Shalan', 'rababd@gmail.com', 33333333, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 1020, '2019-01-09 21:00:00', 4, 2, 'no_certificate_file.png', 'dddddddd', 1);
+(9, 'Rabab Mojahed Mansour Shalan', 'rababd@gmail.com', 33333333, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 1020, '2019-01-09 21:00:00', 4, 2, 'no_certificate_file.png', 'dddddddd', 1),
+(10, 'Rabab Mojahed Mansour Shalan', 'rabab22@gmail.com', 4444444, 'Al-Rudah-Sana\'a', 0, 'no_perosnal_img.png', 1030, '2018-12-04 21:00:00', 3, 1, 'no_certificate_file.png', 'no comment', 1),
+(11, 'Rabab Mojahed Mansour Shalan', 'rabab221@gmail.com', 15645788, 'Al-Rudah-Sana\'a', 0, NULL, 1000, '2019-01-16 21:00:00', 3, 1, NULL, 'lkjlnlnl', 1),
+(13, 'Rabab Mojahed Mansour Shalan', 'rabab6@gmail.com', 2147483647, 'Al-Rudah-Sana\'a', 0, 'no_file.png', 666, '2019-01-05 21:00:00', 3, 1, 'no_file.png', 'kkkkkkkkk', 1),
+(15, 'Rabab Mojahed Mansour Shalan', 'rabab111111@gmail.com', 0, 'Al-Rudah-Sana\'a', 0, 'no_file.png', 5000, '2019-01-10 21:00:00', 4, 1, 'no_file.png', 'helloooooooooooooo', 1),
+(17, 'Rabab Mojahed Mansour Shalan', 'rabab01@gmail.com', 4444444, 'Al-Rudah-Sana\'a', 0, 'no_file.png', 22222, '2019-01-09 21:00:00', 4, 3, 'no_file.png', 'enough', 1);
 
 -- --------------------------------------------------------
 
@@ -127,8 +132,27 @@ CREATE TABLE `patient` (
   `p_email` varchar(50) NOT NULL,
   `p_phone` int(14) NOT NULL,
   `p_address` varchar(50) NOT NULL,
+  `p_gender` tinyint(1) NOT NULL,
   `p_birth_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `play`
+--
+
+CREATE TABLE `play` (
+  `play_id` int(12) NOT NULL,
+  `play_img1` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `play`
+--
+
+INSERT INTO `play` (`play_id`, `play_img1`) VALUES
+(0, 'noimg.png');
 
 -- --------------------------------------------------------
 
@@ -167,7 +191,8 @@ INSERT INTO `service` (`s_id`, `s_title`, `c_id`, `s_description`, `s_img`, `s_e
 (34, 'Eyes examination', 1, '<p>JavaScript is one of the&nbsp;<strong>3 languages</strong>&nbsp;all web developers&nbsp;<strong>must</strong>&nbsp;learn:</p>\r\n\r\n<p>&nbsp;&nbsp; 1.&nbsp;<strong>HTML</strong>&nbsp;to define the content of web pages</p>\r\n\r\n<p>&nbsp;&nbsp; 2.&nbsp;<strong>CSS</strong>&nbsp;to specify the layout of web pages</p>\r\n\r\n<p>&nbsp;&nbsp; 3.&nbsp;<strong>JavaScript</strong>&nbsp;to program the behavior of web pages</p>\r\n\r\n<p>Web pages are not the only place where JavaScript is used. Many desktop and server programs use JavaScript. Node.js is the best known. Some databases, like MongoDB and CouchDB, also use JavaScript as their programming language.</p>\r\n', 'yellow.png', 1),
 (35, 'Nutrition', 0, '<p>JavaScript is one of the&nbsp;<strong>3 languages</strong>&nbsp;all web developers&nbsp;<strong>must</strong>&nbsp;learn.</p>\r\n', 'blue1.png', 1),
 (36, 'Nutrition', 2, '<p>default column gutters for tighter and more compact layouts.</p>\r\n', 'b87519f01a62693119870a60e9e5c04f.png', 1),
-(37, 'Skin and Winter', 2, '<p>This year is described with the winter is the coldest&nbsp;</p>\r\n', 'red1.png', 1);
+(37, 'Skin and Winter', 2, '<p>This year is described with the winter is the coldest&nbsp;</p>\r\n', 'red1.png', 1),
+(38, 'helloooo ', 2, '<p>kjldhklllllllllllll ;;;;;;;;;;;;;;;;;;;;; ooooooooooooooooooooo</p>\r\n', 'red1.png', 1);
 
 -- --------------------------------------------------------
 
@@ -226,7 +251,8 @@ INSERT INTO `user` (`u_id`, `u_username`, `u_password`, `u_email`, `u_registered
 CREATE TABLE `visit` (
   `visit_id` int(12) NOT NULL,
   `v_diagnose` text NOT NULL,
-  `v_treatment` varchar(200) NOT NULL
+  `v_treatment` varchar(200) NOT NULL,
+  `v_visit_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -268,6 +294,12 @@ ALTER TABLE `employee`
 ALTER TABLE `patient`
   ADD PRIMARY KEY (`p_id`),
   ADD UNIQUE KEY `p_email` (`p_email`);
+
+--
+-- Indexes for table `play`
+--
+ALTER TABLE `play`
+  ADD PRIMARY KEY (`play_id`);
 
 --
 -- Indexes for table `record`
@@ -322,7 +354,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `d_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `d_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -340,7 +372,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `s_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `s_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `user`

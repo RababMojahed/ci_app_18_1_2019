@@ -6,7 +6,7 @@ include($included_page);
 ?>
 <?php echo validation_errors();?>
 <?php
- echo form_open('doctor_c/create_doctor');?>
+ echo form_open_multipart('doctor_c/create_doctor');?>
  <div class="row">
 	
 	<div class="col-md-2">
@@ -97,7 +97,7 @@ include($included_page);
 		  			'type'	=>	'file',
 		  			'name'	=>	'd_certificate',
 		  			'class'	=>	'form-control-file input-fields',
-		  			'size'	=>	'20',
+		  			'size'	=>	'50',
 		  			'style'=>'border-radius:4px'
 
 		  			);  		

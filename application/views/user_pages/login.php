@@ -8,8 +8,9 @@ include($page);
 <div class="row">
 	<div class="col-md-3">
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-6">	
 	<?php
+
 		make_input_fields('Email','email','u_email','Enter Email');
  		make_input_fields('Password','password','u_password','Enter Password');
  		 echo br(1);

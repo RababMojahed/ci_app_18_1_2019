@@ -16,23 +16,19 @@
 
 		<link rel="stylesheet" href="<?php  echo base_url();?>assets/css/fontawesome/css/all.min.css">
 		<link rel="stylesheet" href="<?php  echo base_url();?>assets/css/style.css">
+		<script src="<?php  echo base_url();?>assets/js/my_jquery_script.js"></script>
 		<script src="<?php echo base_url();?>assets/ckeditor/ckeditor.js"></script>
 <style type="text/css">
-	.bootstrap-select .dropdown-toggle {
-    background-color: #fafafa;
-    border: 1px solid #e5e5e5 !important;
-    border-radius: 4px !important;
-    color: #919191;
-    padding: 10px 12px;
-    font-weight: 300;
-    letter-spacing: 0px;
-    text-transform: none;
-}
-</style>
+	
+  </style>
+
 	</head>	
 	<body>
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<?php if($this->session->userdata('logged_in')):?>	
+		<a class="navbar-brand" href="<?php echo base_url();?>control_panel_c/index">Dashboard</a>
+		 <?php endif;?>
 		  <a class="navbar-brand" href="<?php echo base_url();?>">CI App</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -76,17 +72,7 @@
 			    </li>
 			    </ul>
 		    <?php endif;?>
-		    <?php if($this->session->userdata('logged_in')):?>
-		    	<ul class='nav navbar-nav navbar-right '>
-		    	<li>
-		    	  <a class="nav-link" href="<?php echo base_url();?>services_c/create_service">Create Service</a>
-		      </li>
-			    </ul>
-			    <ul class='nav navbar-nav navbar-right '>
-		    	<li>
-		    	  <a class="nav-link" href="<?php echo base_url();?>doctor_c/create_doctor">Create Doctor</a>
-		      </li>
-			    </ul>
+		    <?php if($this->session->userdata('logged_in')):?>	
 			    
 			    <ul class='nav navbar-nav navbar-right '>
 			    	<li>

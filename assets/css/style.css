@@ -202,3 +202,15 @@ a {
 .input-fields{
     border: 1.3px solid #007bff
 }
+ .modal-header, h4, .close {
+    background-color: #007bff;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
+ .nav-admin li a{
+    color:#fff;
+  }
